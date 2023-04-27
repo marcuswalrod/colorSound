@@ -15,10 +15,12 @@ col1, col2 = st.columns([1, 1])
 data = np.random.randn(10, 1)
 
 with col1:
-	st.subheader("A wide column with a chart")
-	st.line_chart(data)
-	st.select_slider('Pick a Scale', ['S', 'M', 'L'])
+	st.subheader("Select these certain items")
+	st.multiselect('Test', ['item1', 'item2', 'item3'])
+	st.multiselect('Test', ['item1', 'item2', 'item3'])
 
 with col2:
-	st.subheader("A narrow column with the data")
-	st.write(data)
+	st.subheader("Select these attributes")
+	st.number_input('Pick a number', 0, 10)
+	st.number_input('Pick another number', 0, 10)
+	

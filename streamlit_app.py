@@ -14,7 +14,7 @@ data = np.random.randn(10, 1)
 with col1:
 	st.subheader("A wide column with a chart")
 	st.line_chart(data)
-    st.select_slider('Pick a Scale', ['S', 'M', 'L'])
+	st.select_slider('Pick a Scale', ['S', 'M', 'L'])
 
 with col2:
 	st.subheader("A narrow column with the data")

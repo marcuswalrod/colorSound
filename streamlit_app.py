@@ -8,7 +8,7 @@ def foo():
 
 st.set_page_config(layout='wide')
 st.title('Streamlit Column Test with modified standard theme')
-col1, col2 = st.columns([3, 1])
+col1, col2 = st.columns([1, 1])
 data = np.random.randn(10, 1)
 
 with col1:

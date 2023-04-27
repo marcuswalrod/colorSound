@@ -17,7 +17,7 @@ data = np.random.randn(10, 1)
 with col1:
 	st.subheader("Select these certain items")
 	st.multiselect('Test', ['item1', 'item2', 'item3'])
-	st.multiselect('Test', ['item1', 'item2', 'item3'])
+	st.multiselect('Test2', ['item1', 'item2', 'item3'])
 
 with col2:
 	st.subheader("Select these attributes")

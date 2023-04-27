@@ -4,10 +4,14 @@ import numpy as np
 
 def foo():
 	print('bar')
-
+	
+data = './data.txt'
 
 st.set_page_config(layout='wide')
 st.title('Streamlit Column Test with modified standard theme')
+st.file_uploader('Upload a CSV')
+st.download_button('Download file', data)
+
 col1, col2 = st.columns([1, 1])
 data = np.random.randn(10, 1)
 

@@ -1,3 +1,5 @@
 [theme]
-base="dark"
-primaryColor = "green"
+primaryColor = '#AAA1B3'
+backgroundColor = '#1EC38A'
+secondaryBackgroundColor = '#FFFFFF'
+textColor = '#F3E6FF'

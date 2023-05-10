@@ -8,7 +8,7 @@ Elements Used:
 
 
 Change theme
-Remove Streamlit Logo
+Remove Streamlit Logo / Add own
 Change controls (Four across top)
 
 """

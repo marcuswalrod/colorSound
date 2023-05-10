@@ -3,6 +3,11 @@
 Created on 4-14-2023
 
 @author: Marcus Walrod
+
+Elements Used:
+
+Remove Streamlit Logo
+
 """
 
 #Import necessary libraries
@@ -19,7 +24,6 @@ import librosa
 import glob
 
 
-st.set_page_config(layout='wide')
 #This function generates frequencies in Hertz from notes
 def get_piano_notes():   
     # White keys are in Uppercase and black keys (sharps) are in lowercase
@@ -213,7 +217,7 @@ def img2music(img, scale = [220.00, 246.94 ,261.63, 293.66, 329.63, 349.23, 415.
 
 # Adding an appropriate title for the test website
 st.title("Making Music From Images")
-
+st.set_page_config(layout='wide')
 st.markdown("This little app converts an image into a song. Play around with the various inputs belows using different images!")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})
@@ -399,5 +403,15 @@ if img2load is not None:
  # While no image is uploaded
 else:
     st.write("Waiting for an image to be uploaded...")
-#st.markdown("# Main page 🎈")
+
+hide_st_style = f"""
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                
+                </style>
+                """
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
 #st.sidebar.markdown("# Main page 🎈")

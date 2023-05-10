@@ -217,7 +217,6 @@ def img2music(img, scale = [220.00, 246.94 ,261.63, 293.66, 329.63, 349.23, 415.
 
 # Adding an appropriate title for the test website
 st.title("Making Music From Images")
-st.set_page_config(layout='wide')
 st.markdown("This little app converts an image into a song. Play around with the various inputs belows using different images!")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})

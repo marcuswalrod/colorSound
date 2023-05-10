@@ -341,9 +341,9 @@ with ps1:
     semitones   = st.slider('semitones', min_value=0.0, max_value=12.0, step=1.0, value=0.0) 
 
 
-col01 = st.columns(1)
+col = st.columns(1)
 
-with col01:
+with col:
     st.markdown("### :blue[Lowpass Filter]")
     cutoff_frequency_hz = st.slider('cutoff frequency', min_value=0.0, max_value=1.0, step=0.1, value=0.0)
 

@@ -222,7 +222,7 @@ userImage = Image.open("colorSound.png")
 # Adding an appropriate title and image for the test website
 
 st.image(userImage, width=150)
-st.title("Pixels to Pitch")
+st.title(f":blue[Pixels] to :violet[Pitch]")
 st.markdown("This app is so good it'll make you hear colors.")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})
@@ -278,29 +278,29 @@ with col8:
     #Ask user to select song duration
     n_pixels = st.slider('How many pixels to use? (More pixels take longer)', min_value=12, max_value=320, step=1, value=60)         
 #***Start Peadalboard Definitions*** 
-st.markdown("## Pedalboard")
+st.markdown("## :red[Pedalboard]")
 col9, col10,col11,col12 = st.columns(4)
 #Chorus Parameters
 with col9:
-    st.markdown("### Chorus Parameters")
+    st.markdown("### :blue[Chorus Parameters]")
     rate_hz_chorus = st.slider('rate_hz', min_value=0.0, max_value=100.0, step=0.1, value=0.0)  
 
 #Delay Parameters
 with col10:
-    st.markdown("### Delay Parameters")
+    st.markdown("### :blue[Delay Parameters]")
     delay_seconds = st.slider('delay_seconds', min_value=0.0, max_value=2.0, step=0.1, value=0.0)  
     
 #Distortion Parameters
 with col11:
-    st.markdown("### Distortion Parameters")
+    st.markdown("### :blue[Distortion Parameters]")
     drive_db = st.slider('drive_db', min_value=0.0, max_value=100.0, step=1.0, value=0.0) 
 
 #Gain Parameters
 with col12:
-    st.markdown("### Gain Parameters")
+    st.markdown("### :blue[Gain Parameters]")
     gain_db = st.slider('gain_db', min_value=0.0, max_value=100.0, step=1.0, value=0.0) 
 
-st.markdown("### Reverb Parameters")
+st.markdown("### :blue[Reverb Parameters]")
 rev1, rev2, rev3, rev4, rev5= st.columns(5)
 #Reverb Parameters
 with rev1:
@@ -314,7 +314,7 @@ with rev4:
 with rev5:
     width     = st.slider('width'    , min_value=0.0, max_value=1.0, step=0.1, value=0.0)
 
-st.markdown("### Ladder Filter Parameters")
+st.markdown("### :blue[Ladder Filter Parameters]")
 lf1,lf2,lf3 = st.columns(3)
 #Ladder Filter Parameters
 with lf1:
@@ -328,12 +328,12 @@ with lf3:
 ch1,ps1 = st.columns(2) 
 #Phaser Parameters
 with ch1:
-    st.markdown("### Phaser Parameters")
+    st.markdown("### :blue[Phaser Parameters]")
     rate_hz_phaser = st.slider('rate_hz_phaser', min_value=0.0, max_value=100.0, step=0.1, value=0.0)  
     depth_phaser   = st.slider('depth', min_value=0.0, max_value=1.0, step=0.1, value=0.0) 
 
 with ps1:
-    st.markdown("### Pitch Shift Parameters")
+    st.markdown("### :blue[Pitch Shift Parameters]")
     semitones   = st.slider('semitones', min_value=0.0, max_value=12.0, step=1.0, value=0.0) 
 
 # Making the required prediction

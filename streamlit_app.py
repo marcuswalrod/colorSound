@@ -18,6 +18,8 @@ from scipy.io import wavfile
 import librosa
 import glob
 
+
+st.set_page_config(layout='wide')
 #This function generates frequencies in Hertz from notes
 def get_piano_notes():   
     # White keys are in Uppercase and black keys (sharps) are in lowercase

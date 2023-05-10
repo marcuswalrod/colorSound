@@ -386,7 +386,7 @@ if img2load is not None:
         Delay(delay_seconds = delay_seconds),
         Reverb(room_size = room_size, wet_level = wet_level, dry_level = dry_level, width = width),
         Phaser(rate_hz = rate_hz_phaser, depth = depth_phaser),
-        LowpassFilter(pass_filter = cutoff_frequency_hz),
+        LowpassFilter(),
         PitchShift(semitones = semitones),
         Chorus(rate_hz = rate_hz_chorus)
         ])

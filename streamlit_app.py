@@ -9,7 +9,7 @@ Elements Used:
 
 Change theme
 Remove Streamlit Logo
-Change controls
+Change controls (Four across top)
 
 """
 
@@ -227,8 +227,8 @@ df2 = pd.DataFrame({'Keys': ['A','a','B','C','c','D','d','E','F','f','G','g']})
 df3 = pd.DataFrame({'Octaves': [1,2,3]})
 df4 = pd.DataFrame({'Harmonies': ['U0','ST','M2','m3','M3','P4','DT','P5','m6','M6','m7','M7','O8']})
 
-st.sidebar.markdown("Select sample image if you'd like to use one of the preloaded images. Select User Image is you'd like to use your own image.")
-_radio = st.sidebar.radio("",("Use Sample Image", "Use User Image"))
+st.sidebar.markdown("This is where you choose whether you use our images or yours.")
+_radio = st.sidebar.radio("",("Use Sample Image", "Use Imported Image"))
 
 sample_images = glob.glob('*.jpg')
 samp_imgs_df = pd.DataFrame(sample_images,columns=['Images'])

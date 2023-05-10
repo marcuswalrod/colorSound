@@ -6,7 +6,10 @@ Created on 4-14-2023
 
 Elements Used:
 
+
+Change theme
 Remove Streamlit Logo
+Change controls
 
 """
 
@@ -216,8 +219,8 @@ def img2music(img, scale = [220.00, 246.94 ,261.63, 293.66, 329.63, 349.23, 415.
 
 
 # Adding an appropriate title for the test website
-st.title("Making Music From Images")
-st.markdown("This little app converts an image into a song. Play around with the various inputs belows using different images!")
+st.title("Pixels to Pitch")
+st.markdown("This app is so good it'll make you hear colors.")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})
 df2 = pd.DataFrame({'Keys': ['A','a','B','C','c','D','d','E','F','f','G','g']})
@@ -244,20 +247,20 @@ st.sidebar.image(img2load)
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    scale = st.selectbox('What scale would you like yo use?', df1['Scale_Choice'])
+    scale = st.select_slider('What scale would you like yo use?', df1['Scale_Choice'])
 
     'You selected the ' + scale + ' scale'
 with col2:
-    key = st.selectbox('What key would you like to use?', df2['Keys']) 
+    key = st.select_slider('What key would you like to use?', df2['Keys']) 
     
     'You selected: ', key
 
 with col3:
-    octave = st.selectbox('What octave would you like to use?', df3['Octaves']) 
+    octave = st.select_slider('What octave would you like to use?', df3['Octaves']) 
 
     'You selected: ', octave
 with col4:
-    harmony = st.selectbox('What harmony would you like to use?', df4['Harmonies']) 
+    harmony = st.select_slider('What harmony would you like to use?', df4['Harmonies']) 
 
     'You selected: ', harmony
 

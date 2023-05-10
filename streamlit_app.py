@@ -341,7 +341,7 @@ with ps1:
     semitones   = st.slider('semitones', min_value=0.0, max_value=12.0, step=1.0, value=0.0) 
 
 
-col = st.columns(1)
+col = st.columns(2)
 
 with col:
     st.markdown("### :blue[Lowpass Filter]")

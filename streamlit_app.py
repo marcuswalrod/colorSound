@@ -11,6 +11,8 @@ Change theme
 Remove Streamlit Logo / Add own
 Change controls (Four across top)
 
+Github Markdown
+
 """
 
 #Import necessary libraries

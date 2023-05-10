@@ -13,6 +13,7 @@ Change controls (Four across top)
 
 Github Markdown
 
+
 """
 
 #Import necessary libraries
@@ -21,7 +22,7 @@ import pandas as pd
 import numpy as np
 import cv2
 import random
-from pedalboard import Pedalboard, Chorus, Reverb, Gain, LadderFilter,Phaser, Delay, PitchShift, Distortion
+from pedalboard import Pedalboard, Chorus, Reverb, Gain, LadderFilter,Phaser, Delay, LowpassFilter, PitchShift, Distortion
 from pedalboard.io import AudioFile
 from PIL import Image
 from scipy.io import wavfile
@@ -304,6 +305,7 @@ with col12:
 
 st.markdown("### :blue[Reverb Parameters]")
 rev1, rev2, rev3, rev4, rev5= st.columns(5)
+
 #Reverb Parameters
 with rev1:
     room_size = st.slider('room_size', min_value=0.0, max_value=1.0, step=0.1, value=0.0) 
@@ -337,6 +339,13 @@ with ch1:
 with ps1:
     st.markdown("### :blue[Pitch Shift Parameters]")
     semitones   = st.slider('semitones', min_value=0.0, max_value=12.0, step=1.0, value=0.0) 
+
+
+col01 = st.columns(1)
+
+with col01:
+    st.markdown("### :blue[Lowpass Filter]")
+    cutoff_frequency_hz = st.slider('cutoff frequency', min_value=0.0, max_value=1.0, step=0.1, value=0.0)
 
 # Making the required prediction
 if img2load is not None:
@@ -377,6 +386,7 @@ if img2load is not None:
         Delay(delay_seconds = delay_seconds),
         Reverb(room_size = room_size, wet_level = wet_level, dry_level = dry_level, width = width),
         Phaser(rate_hz = rate_hz_phaser, depth = depth_phaser),
+        LowpassFilter(pass_filter = cutoff_frequency_hz),
         PitchShift(semitones = semitones),
         Chorus(rate_hz = rate_hz_chorus)
         ])

@@ -404,14 +404,12 @@ if img2load is not None:
 else:
     st.write("Waiting for an image to be uploaded...")
 
-hide_st_style = f"""
-                <style>
-                #MainMenu {visibility: hidden;}
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
-                
-                </style>
-                """
-
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-#st.sidebar.markdown("# Main page 🎈")
+

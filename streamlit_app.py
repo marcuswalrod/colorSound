@@ -217,9 +217,12 @@ def img2music(img, scale = [220.00, 246.94 ,261.63, 293.66, 329.63, 349.23, 415.
                                                
     return song, pixels_df, harmony
 
+userImage = Image.open("colorSound.png")
 
-# Adding an appropriate title for the test website
+# Adding an appropriate title and image for the test website
+
 st.title("Pixels to Pitch")
+st.image(userImage, width=50)
 st.markdown("This app is so good it'll make you hear colors.")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})

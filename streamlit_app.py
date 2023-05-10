@@ -238,7 +238,7 @@ samp_img = st.sidebar.selectbox('Choose a sample image', samp_imgs_df['Images'])
 user_data = st.sidebar.file_uploader(label="Upload your own Image")
 if _radio == "Use Sample Image":
     img2load = samp_img
-elif _radio == "Use User Image": 
+elif _radio == "Use Imported Image": 
     img2load = user_data
 
 #Display the image
@@ -247,22 +247,16 @@ st.sidebar.image(img2load)
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    scale = st.select_slider('What scale would you like yo use?', df1['Scale_Choice'])
+    scale = st.select_slider('Scale', df1['Scale_Choice'])
 
-    'You selected the ' + scale + ' scale'
 with col2:
-    key = st.select_slider('What key would you like to use?', df2['Keys']) 
-    
-    'You selected: ', key
+    key = st.select_slider('Key', df2['Keys']) 
 
 with col3:
-    octave = st.select_slider('What octave would you like to use?', df3['Octaves']) 
+    octave = st.select_slider('Octave', df3['Octaves']) 
 
-    'You selected: ', octave
 with col4:
-    harmony = st.select_slider('What harmony would you like to use?', df4['Harmonies']) 
-
-    'You selected: ', harmony
+    harmony = st.select_slider('Harmony', df4['Harmonies']) 
 
 col5, col6 = st.columns(2)
 with col5:

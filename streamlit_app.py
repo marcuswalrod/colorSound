@@ -221,8 +221,8 @@ userImage = Image.open("colorSound.png")
 
 # Adding an appropriate title and image for the test website
 
+st.image(userImage, width=150)
 st.title("Pixels to Pitch")
-st.image(userImage, width=50)
 st.markdown("This app is so good it'll make you hear colors.")
 #Making dropdown select box containing scale, key, and octave choices
 df1 = pd.DataFrame({'Scale_Choice': ['AEOLIAN', 'BLUES', 'PHYRIGIAN', 'CHROMATIC','DORIAN','HARMONIC_MINOR','LYDIAN','MAJOR','MELODIC_MINOR','MINOR','MIXOLYDIAN','NATURAL_MINOR','PENTATONIC']})

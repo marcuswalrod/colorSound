@@ -345,7 +345,7 @@ col = st.columns(1)
 
 with col:
     st.markdown("### :blue[Lowpass Filter]")
-    cutoff_frequency_hz = st.slider('cutoff frequency', min_value=0.0, max_value=1.0, step=0.1, value=0.0)
+    pass_filter = st.slider('cutoff frequency', min_value=0.0, max_value=1.0, step=0.1, value=0.0)
 
 # Making the required prediction
 if img2load is not None:

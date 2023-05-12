@@ -423,6 +423,3 @@ def load_data(sheets_url):
     return pd.read_csv(csv_url)
 
 df = load_data(st.secrets["public_gsheets_url"])
-
-for row in df.itertuples():
-    st.write(f"audio_bytes2, format='audio/wav'")

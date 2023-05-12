@@ -340,13 +340,6 @@ with ps1:
     st.markdown("### :blue[Pitch Shift Parameters]")
     semitones   = st.slider('semitones', min_value=0.0, max_value=12.0, step=1.0, value=0.0) 
 
-
-col = st.columns(1)
-
-'''with col:
-    st.markdown("### :blue[Lowpass Filter]")
-    pass_filter = st.slider('cutoff frequency', min_value=0.0, max_value=1.0, step=0.1, value=0.0)'''
-
 # Making the required prediction
 if img2load is not None:
     # Saves
@@ -386,7 +379,6 @@ if img2load is not None:
         Delay(delay_seconds = delay_seconds),
         Reverb(room_size = room_size, wet_level = wet_level, dry_level = dry_level, width = width),
         Phaser(rate_hz = rate_hz_phaser, depth = depth_phaser),
-        LowpassFilter(),
         PitchShift(semitones = semitones),
         Chorus(rate_hz = rate_hz_chorus)
         ])

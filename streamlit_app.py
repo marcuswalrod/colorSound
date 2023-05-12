@@ -29,15 +29,7 @@ from scipy.io import wavfile
 import librosa
 import glob
 
-@st.cache_data(ttl=600)
-def load_data(sheets_url):
-    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url)
 
-df = load_data(st.secrets["public_gsheets_url"])
-
-for row in df.itertuples():
-    st.write(f"{row.name} has a :{row.pet}:")
 
 #This function generates frequencies in Hertz from notes
 def get_piano_notes():   
@@ -425,3 +417,12 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+@st.cache_data(ttl=600)
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
+
+df = load_data(st.secrets["public_gsheets_url"])
+
+for row in df.itertuples():
+    st.write(f"audio_bytes2, format='audio/wav'")
